@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial scale-1.0">
+    <title> Yiheng Li Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8457c040c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="header-text">
+                <p>Student at UBC</p>
+                <h1><span> Yiheng Li's Personal Portfolio</span></h1>
+            </div>
+        </div>
+    </div>
+    <!--------------- ABOUT ------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-colo-1">
+                    <img src="images/Headshot.jpeg">
+                </div>
+                <div class="about-colo-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm Yiheng Li, a current student in UBC Sauder's BCom program, specializing in the combined 
+                        major in Business and Computer Science program (BUCS). While I am passionate for both business and coding, 
+                        I have recently shifted my focus to computer science, immersing myself in the world of programming.
+                        I have previous experience in multiple case competitions and business organizations which has trained me 
+                        to perform well in a team environment. Additionally, I have touched upon a few projects that include 
+                        data analytics and a few game designs which are listed below in my projects. 
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data analysis </span><br>Using API for data analysis</li>
+                            <li><span>Web Development </span><br>Designing and managing websites</li>
+                            <li><span>Languages</span><br>HTML, CSS, JavaScript, Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UBC Sauder BComm </span><br>Combined Major in Business and Computer Science (BUCS)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------ Portfolio ---------------->
+    <div id="portfolio">
+        <div class="container containerp">
+            <h1 class="sub-title">Previous Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/biotech.jpeg">
+                    <div class="layer">
+                        <h3>Analyzing Heightened Social Media Influences 
+                            Pertaining to Biotechnology Stocks</h3>
+                        <p>Research Paper using Data Mining techniques from Stocktwits API</p>
+                        <a href="https://github.com/YiggidyYi/Heightened-Social-Media-Influences-Pertaining-to-Biotechnology
+                        -Stocks-Research-Paper.git" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.jpeg">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Test Test Test Test Test Test Test Test Test</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpeg">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Test Test Test Test Test Test Test Test Test</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="images/YihengLiResume.pdf" download class="btn">Download Resume</a>
+        </div>
+    </div>
+
+    <!------------ Contact ---------------->
+    <div id="contact">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"></h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>yihengli0410@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>236-967-3842</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/yiheng1/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/yiheng-li-a86b8b214/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/yiheng.li.96/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
